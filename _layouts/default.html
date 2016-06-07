@@ -10,27 +10,16 @@
         
         <!-- stylesheets -->
         <link href="/css/main.css" rel="stylesheet">
-        <link href="" rel="stylesheet">
+        <link href="/css/quick-info-bar.css" rel="stylesheet">
         <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
               rel="stylesheet">
+        
+        <!--fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600|Jaldi' 
+              rel='stylesheet' type='text/css'>
+        
+        <!-- javascript -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                var bar = $(".quick-info-bar");
-                var kids = $(".quick-info-bar > ul > li");
-                var elem_width = bar.width() / kids.length, cnt;
-                
-                var cnt = elem_width / 2;
-                kids.each(function (i, child) {
-                    $(child).css({
-                        'width': $(child).outerWidth(true)
-                    });
-//                    console.log($(child).outerWidth(true));
-//                    console.log(i);
-//                    cnt += elem_width;
-                });
-            });
-        </script>
         <!-- http://www.templatemonster.com/demo/58888.html -->
     </head>
     <body>
@@ -44,14 +33,14 @@
                 </li>
                 <li class="center-info">
                     <a href="#">
-                        <i class="fa fa-map fa-lg" aria-hidden="true"></i>
+                        <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
                         1121 College Dr, Saskatoon, SK S7N 0W3
                     </a>
                 </li>
-                <li class="right-info">
-                    <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
-                    <i class="fa fa-github fa-lg" aria-hidden="true"></i>
-                    <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+                <li class="social-buttons">
+                    <a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
                 </li>
             </ul>
         </div>
