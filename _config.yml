@@ -1,2 +1,3 @@
 name: Life and Restoration Anglican
 markdown: kramdown
+exclude: ["nbproject"]
