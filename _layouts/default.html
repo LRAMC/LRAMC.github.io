@@ -5,63 +5,113 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->        
-        
+
         <title>{{ page.title }}</title>
-        
+
         <!-- stylesheets -->
         <link href="/css/main.css" rel="stylesheet">
         <link href="/css/quick-info-bar.css" rel="stylesheet">
+        <link href="/css/nav-bar.css" rel="stylesheet">
         <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"
               rel="stylesheet">
-        
+
         <!--fonts -->
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600|Jaldi' 
               rel='stylesheet' type='text/css'>
-        
+
         <!-- javascript -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-        <!-- http://www.templatemonster.com/demo/58888.html -->
+        <script src="/js/script.js"></script>
+        <!-- http://www.templatemonster.com/demo/58888.html 
+        https://www.designmantic.com/ 
+        https://css-tricks.com/resolution-specific-stylesheets/-->
+        <script>
+
+        </script>
     </head>
     <body>
-        <div class="quick-info-bar">
-            <ul>
-                <li class="left-info">
-                    <a href="callto:+13062222222">
-                        <i class="fa fa-mobile fa-lg" aria-hidden="true"></i>
-                        +1-306-222-2222
-                    </a>
-                </li>
-                <li class="center-info">
-                    <a href="#">
-                        <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
-                        1121 College Dr, Saskatoon, SK S7N 0W3
-                    </a>
-                </li>
-                <li class="social-buttons">
-                    <a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
-                </li>
-            </ul>
+        <div class="content">
+            <div class="quick-info-bar">
+                <ul>
+                    <li class="left-info">
+                        <span class="quick-info-item">
+                            <a href="callto:+13062222222">
+                                <i class="fa fa-mobile fa-lg" aria-hidden="true"></i>
+                                <span>+1-306-222-2222</span>
+                            </a>
+                        </span>
+                    </li>
+                    <li class="center-info">
+                        <span class="quick-info-item">
+                            <a href="#">
+                                <i class="fa fa-map-signs fa-lg" aria-hidden="true"></i>
+                                <span>1121 College Dr, Saskatoon, SK S7N 0W3</span>
+                            </a>
+                        </span>
+                    </li>
+                    <li class="social-buttons">
+                        <span class="quick-info-item">
+                            <a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-bar">
+                <div class="nav-bar-logo">
+                    <a href="/"><span>lramc</span></a>
+                </div>
+                <div class="nav-bar-options">
+                    <ul>
+                        <li>
+                            <a href="/">
+                                <i class="fa fa-home" aria-hidden="true" 
+                                   title="Home"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-book" aria-hidden="true" 
+                                   title="Sermons"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-file-image-o" aria-hidden="true"
+                                   title="Gallery"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-phone-square" aria-hidden="true" 
+                                   title="Contact Us"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-search" aria-hidden="true" 
+                                   title="Search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/cv">CV</a></li>
-                <li><a href="/blog">Blog</a></li>
-            </ul>
-        </nav>
-        <div class="container">
+
+        <div style="position: relative;">
 
             {{ content }}
 
         </div><!-- /.container -->
         <footer>
-            <ul>
-                <li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-                <li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-            </ul>
+            <!--            <ul>
+                            <li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
+                            <li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
+                        </ul>-->
         </footer>
     </body>
 </html>

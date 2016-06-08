@@ -5,9 +5,6 @@
     text-transform: capitalize;
     text-align: center;
     padding: .7rem 8% .7rem 8%;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    font-size: 12px;
 }
 
 .quick-info-bar ul {
@@ -15,44 +12,66 @@
     margin: 2px auto;
 }
 
-.quick-info-bar li {
+.quick-info-bar > ul > li {
     display: inline;
     text-align: center;
 }
 
-.quick-info-bar a {
+.quick-info-bar li:not(.social-buttons):hover * {
+    color: #ffffff;
+}
+
+.quick-info-item .fa + span::before {
+    content: "";
+    display: inline;
+    clear: both;
+    margin: 0 5px
+}
+
+.quick-info-item {
+    margin: 0 auto;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.quick-info-item * {
+    color: #000000;
+}
+
+.quick-info-item > a {
     text-decoration: none;
 }
 
-.quick-info-bar li:not(.social-buttons):hover * {
-    color: #ffff66;
+.quick-info-item a > :not(.fa) {
+    font-size: 12px;
 }
 
-.quick-info-bar * {
-    color: #ffffff;
-    vertical-align: middle;
+.quick-info-item * {
+    transition: color 200ms linear 0s;
 }
 
 .left-info {
     float: left;
+    text-align: left;
+}
+
+.center-info {
+    text-align: left;
+    margin: 0 auto;
+    zoom: 1;
 }
 
 .social-buttons {
     float: right;
 }
 
-.social-buttons *::after {
+.social-buttons a:not(:last-child)::after {
     content: "";
     display: inline;
     clear: both;
-    margin: 0 1rem 1rem 0;
+    margin: 0 1.1rem
 }
 
 .social-buttons *:hover {
-    color: #ffff66;
-}
-
-.center-info {
-    margin: 0 auto;
-    zoom: 1;
+    color: #ffffff;
 }

@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 7-Jun-2016, 2:09:16 PM
+    Author     : casablanca
+*/
+
+.nav-bar {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    padding: .7rem 8% .7rem 8%;
+    border: 3px #ffff66 solid;
+    display: inline-block;
+}
+
+.nav-bar a {
+    text-decoration: none;
+}
+
+.nav-bar * {
+    color: #ffffff;
+}
+
+.nav-bar-logo {
+    border: 3px #00ff00 solid;
+    float: left;
+    /*font-size: 2rem;*/
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+/*    top: -50%;
+    transform: translateY(50%);*/
+}
+
+.nav-bar-options {
+    margin: 0 auto;
+    float: right;
+    text-align: center;
+    /*font-size: 1.5rem;*/
+    border: 3px #990033 solid;
+}
+
+.nav-bar-options > ul {
+    list-style: none;
+}
+
+.nav-bar-options > ul > li {
+    display: inline;
+}
