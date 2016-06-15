@@ -1,16 +1,43 @@
 $(document).ready(function() {
-    console.log($(".nav-bar").css('max-width'));
     
-    // Arrange the nav bar items
-    $(".nav-bar-options > *").hover(function () {
-        var elem = $(this);
-        console.log("Hovering over: " + elem.children("[title]").attr('title'));
-    }, function () {
-        var elem = $(this);
-        console.log("Leaving: " + elem.attr('title'));
-    });
+    // Scale the background image to fit the page
+    console.log("Width is: " + $(".content:before").width());
+    
+    var nav_bar = $(".nav-bar");
+    var logo = $(".nav-bar-logo"); 
+    var options = $(".nav-bar-options");
+    
+//    logo.centerVertical().css({
+//        display: "inline-block",
+//        width: "10%",
+//        height: nav_bar.height()
+//    });
+//        
+//    options.centerVertical().css({
+//        display: "inline-block",
+//        width: "80%",
+//        height: nav_bar.height()
+//    });
+    
+    arrangeNavBarOptions();
 });
 
 function arrangeNavBarOptions() {
-    $(".nav-bar-options > *");
+    var options = $(".nav-bar-options");
+    var item_width = Math.max.apply(null, $(options).find("a").map(function(_, elem) {
+        return $(elem).outerWidth(true);
+    }));
+    
+    console.log(item_width);
 }
+
+$.fn.extend ({
+    centerVertical: function() {
+        this.css({
+            position: "absolute",
+            top: "50%",
+            transform: "translateY(-50%)"
+        });
+        return this;
+    }
+});

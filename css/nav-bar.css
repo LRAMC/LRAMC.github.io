@@ -9,16 +9,32 @@ and open the template in the editor.
 */
 
 .nav-bar {
-    position: relative;
+    *zoom: 1;
+    clear: both;
     text-align: center;
     text-transform: uppercase;
     padding: .7rem 8% .7rem 8%;
     border: 3px #ffff66 solid;
-    display: inline-block;
 }
+
+/* Clear-fix stuff begin*/
+.nav-bar:before,
+.nav-bar:after {
+    content: "";
+    display: table;
+}
+
+.nav-bar:after {
+    clear: both;
+}
+/* Clear-fix stuff End*/
 
 .nav-bar a {
     text-decoration: none;
+}
+
+.nav-bar > * {
+    margin: 0 auto;
 }
 
 .nav-bar * {
@@ -28,27 +44,43 @@ and open the template in the editor.
 .nav-bar-logo {
     border: 3px #00ff00 solid;
     float: left;
+    text-align: justify;
     /*font-size: 2rem;*/
     letter-spacing: 3px;
-    font-weight: bold;
-    text-align: center;
-    margin: 0 auto;
-/*    top: -50%;
-    transform: translateY(50%);*/
+}
+
+.nav-bar-logo > a > :first-child {
+    font-family: 'Exo', sans-serif;
+    font-weight: 600;
+    font-size: 38px;
+    color: #66ffcc;
+}
+
+.nav-bar-logo > a > :last-child {
+    text-transform: capitalize;
+    font-size: 10px;
+    color: #ccffff;
+    font-weight: 600;
 }
 
 .nav-bar-options {
-    margin: 0 auto;
     float: right;
-    text-align: center;
-    /*font-size: 1.5rem;*/
-    border: 3px #990033 solid;
+    font-size: 2.5rem;
+    margin: auto 0;
 }
 
 .nav-bar-options > ul {
     list-style: none;
+    padding: auto 5px;
+    border: 3px #990033 solid;
+    
 }
 
 .nav-bar-options > ul > li {
     display: inline;
+}
+
+.nav-bar-options > ul > li + li:before {
+    content: "";
+    margin: 0 3rem;
 }

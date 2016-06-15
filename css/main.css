@@ -16,16 +16,19 @@
     left: 0;
     right: 0;
     z-index: -1;
+    overflow: hidden;
     
     display: inline-block;
     height: 100%;
     width: 100%;
-    background-image: url(/images/bg.png);
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
-    filter: blur(3px);
+    margin: 0 auto;
+    background-image: url(/images/coarse.jpg);
+    background-size: cover;
+/*    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);*/
 }
 
 /*
