@@ -1,7 +1,7 @@
 .quick-info-bar {
     position: relative;
     height: auto;
-    background-color: #cc0033;
+    background-color: #e51c23;
     text-transform: capitalize;
     text-align: center;
     padding: .7rem 8% .7rem 8%;
@@ -17,8 +17,11 @@
     text-align: center;
 }
 
+.quick-info-bar li:not(.social-buttons) {
+    font-weight: bold;
+}
 .quick-info-bar li:not(.social-buttons):hover * {
-    color: #ffffff;
+    color: #1b3911;
 }
 
 .quick-info-item .fa + span:before {
@@ -35,7 +38,7 @@
 }
 
 .quick-info-item * {
-    color: #000000;
+    color: #ffffff;
 }
 
 .quick-info-item > a {
@@ -73,5 +76,5 @@
 }
 
 .social-buttons *:hover {
-    color: #ffffff;
+    color: #5f4f00;
 }

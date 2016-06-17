@@ -3,8 +3,9 @@
     clear: both;
     text-align: center;
     text-transform: uppercase;
-    padding: .7rem 8% .7rem 8%;
-    border: 3px #ffff66 solid;
+    margin: 1rem auto;
+    padding: .7rem 5% .7rem 5%;
+    /*border: 3px #ffff66 solid;*/
 }
 
 /* Clear-fix stuff begin*/
@@ -32,45 +33,45 @@
 }
 
 .nav-bar-logo {
-    border: 3px #00ff00 solid;
+    /*border: 3px #00ff00 solid;*/
     float: left;
     text-align: justify;
-    /*font-size: 2rem;*/
     letter-spacing: 3px;
 }
 
 .nav-bar-logo > a > :first-child {
     font-family: 'Exo', sans-serif;
     font-weight: 600;
-    font-size: 38px;
+    font-size: 32px;
     color: #66ffcc;
 }
 
 .nav-bar-logo > a > :last-child {
     text-transform: capitalize;
-    font-size: 10px;
+    font-size: 8px;
     color: #ccffff;
     font-weight: 600;
 }
 
 .nav-bar-options {
+    font-family: 'Roboto Mono', monospace;
     float: right;
-    font-size: 2.5rem;
-    margin: auto 0;
+    font-size: 1.3rem;
+    width: 60%;
+    text-align: center;
 }
 
 .nav-bar-options > ul {
     list-style: none;
-    padding: auto 5px;
-    border: 3px #990033 solid;
-    
+    /*border: 3px #990033 solid;*/
 }
 
 .nav-bar-options > ul > li {
     display: inline;
+    margin: 0 auto;
 }
 
 .nav-bar-options > ul > li + li:before {
-    content: "";
-    margin: 0 3rem;
+    content: attr(data-before);
+    visibility: hidden;
 }

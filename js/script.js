@@ -1,43 +1,42 @@
 $(document).ready(function() {
-    
-    // Scale the background image to fit the page
-    console.log("Width is: " + $(".content:before").width());
-    
-    var nav_bar = $(".nav-bar");
-    var logo = $(".nav-bar-logo"); 
-    var options = $(".nav-bar-options");
-    
-//    logo.centerVertical().css({
-//        display: "inline-block",
-//        width: "10%",
-//        height: nav_bar.height()
-//    });
-//        
-//    options.centerVertical().css({
-//        display: "inline-block",
-//        width: "80%",
-//        height: nav_bar.height()
-//    });
-    
-    arrangeNavBarOptions();
+    (function( module, $, undefined ) {
+
+        var navBar = $(".nav-bar-options");
+        var navBarItems = navBar.find("li");
+
+        module.centerNavBarOptions = function () {
+            var totalChildrenWidth = navBarItems.map(function(_, elem) {
+                return $(elem).outerWidth(true);
+            }).toArray().reduce(function (prev, curr) {
+                return prev + curr;
+            }, 0);
+
+            var childrenSize = parseInt(navBar.css('font-size'));
+
+            // Only want to space the elements out if there is more than one
+            // of them
+            if (navBarItems.length > 1) {
+                var spaceBetween = (navBar.width() - totalChildrenWidth) / (navBarItems.length - 1) / childrenSize;
+                var dataText = repeat("*", spaceBetween + 1);
+                navBarItems.each(function() {
+                    $(this).attr('data-before', dataText);
+                });
+            }
+        };
+
+    }) (window.module = window.module || {}, jQuery);
+
+    ///////////////////////////// SCRIPT STARTS HERE /////////////////////////////////////////////////////
+    module.centerNavBarOptions();
 });
 
-function arrangeNavBarOptions() {
-    var options = $(".nav-bar-options");
-    var item_width = Math.max.apply(null, $(options).find("a").map(function(_, elem) {
-        return $(elem).outerWidth(true);
-    }));
-    
-    console.log(item_width);
+function repeat(pattern, count) {
+    if (count < 1) return '';
+    var result = '';
+    while (count > 1) {
+        if (count & 1) result += pattern;
+        count >>= 1, pattern += pattern;
+    }
+    return result + pattern;
 }
 
-$.fn.extend ({
-    centerVertical: function() {
-        this.css({
-            position: "absolute",
-            top: "50%",
-            transform: "translateY(-50%)"
-        });
-        return this;
-    }
-});
